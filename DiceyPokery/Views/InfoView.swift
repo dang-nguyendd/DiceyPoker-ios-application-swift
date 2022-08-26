@@ -1,27 +1,8 @@
-////
-////  InfoView.swift
-////  RMIT Casino
-////
-////  Created by Tom Huynh on 8/2/22.
-////
-//
-//import SwiftUI
-//
-//struct InfoView: View {
-
-//}
-//
-//
-//struct InfoView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    InfoView()
-//  }
-//}
-
 import SwiftUI
 
 struct InfoView: View {
     @Environment(\.dismiss) var dismiss
+
     var body: some View {
         GeometryReader {screen in
             ZStack {
