@@ -1,11 +1,12 @@
-//
-//  Leaderboard.swift
-//  DiceyPokery
-//
-//  Created by Nguyen, Nguyen Dinh Dang on 18/08/2022.
-//
-
 import SwiftUI
+
+
+func checkAchievement(user: User) -> String{
+    if user.highscore >= 100 return "Pro"
+    else if user.highscore >= 300 return "Master"
+    else if user.highscore >= 500 return "Supreme"
+    else if user.highscore <= 0 return "Loser"
+}
 
 struct Leaderboard: View {
     @Environment(\.dismiss) var dismiss
@@ -20,8 +21,10 @@ struct Leaderboard: View {
                         .frame(alignment: .center)
                         .padding()
                     VStack(alignment: .leading, spacing: 10) {
-                        LeaderboardPanel(name: "Billie", score: 140)
-                        LeaderboardPanel(name: "Billie", score: 140)
+                        for (key, value) in UserDefaults.standard.dictionaryRepresentation() {
+                            var user = readUserDefault(checkUser: key)
+                            LeaderboardPanel(name: user.name + "\(checkAchievement(user: user))", user.highscore)
+                        }
                     }
                     .frame(width: screen.size.width/1.15)
                 }
