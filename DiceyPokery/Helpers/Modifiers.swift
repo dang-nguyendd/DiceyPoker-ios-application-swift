@@ -1,9 +1,14 @@
-//
-//  Modifiers.swift
-//  RMIT Casino
-//
-//  Created by Tom Huynh on 8/1/22.
-//
+/*
+  RMIT University Vietnam
+  Course: COSC2659 iOS Development
+  Semester: 2022B
+  Assessment: Assignment 2
+  Author: Nguyen Dinh Dang Nguyen
+  ID: s3759957
+  Created  date: 01/8/2022
+  Last modified: 29/8/2022
+  Acknowledgement: Tom Huynh (modified)
+*/
 
 import SwiftUI
 
