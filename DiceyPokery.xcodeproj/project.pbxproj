@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7744B22928A8BF1E007BE472 /* DiceyPokeryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744B22828A8BF1E007BE472 /* DiceyPokeryApp.swift */; };
+		7744B22D28A8BF21007BE472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7744B22C28A8BF21007BE472 /* Assets.xcassets */; };
+		7744B23028A8BF21007BE472 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7744B22F28A8BF21007BE472 /* Preview Assets.xcassets */; };
+		7744B23928A8C04B007BE472 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744B23728A8C04B007BE472 /* Modifiers.swift */; };
+		7744B23A28A8C04B007BE472 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744B23828A8C04B007BE472 /* PlaySound.swift */; };
+		7744B24428A8C053007BE472 /* bet-chip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7744B23C28A8C053007BE472 /* bet-chip.mp3 */; };
+		7744B24528A8C053007BE472 /* blink.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7744B23D28A8C053007BE472 /* blink.mp3 */; };
+		7744B24628A8C053007BE472 /* winning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7744B23E28A8C053007BE472 /* winning.mp3 */; };
+		7744B24728A8C053007BE472 /* spin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7744B23F28A8C053007BE472 /* spin.mp3 */; };
+		7744B24828A8C053007BE472 /* gameover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7744B24028A8C053007BE472 /* gameover.mp3 */; };
+		7744B24928A8C053007BE472 /* drum-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7744B24128A8C053007BE472 /* drum-music.mp3 */; };
+		7744B24A28A8C053007BE472 /* highscore.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7744B24228A8C053007BE472 /* highscore.mp3 */; };
+		7744B24B28A8C053007BE472 /* ring-up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7744B24328A8C053007BE472 /* ring-up.mp3 */; };
+		7744B25A28A8C084007BE472 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744B25628A8C084007BE472 /* InfoView.swift */; };
+		7744B25B28A8C084007BE472 /* ReelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744B25728A8C084007BE472 /* ReelView.swift */; };
+		7744B25C28A8C084007BE472 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744B25828A8C084007BE472 /* LogoView.swift */; };
+		7744B25D28A8C084007BE472 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744B25928A8C084007BE472 /* ContentView.swift */; };
+		775C8B4428AB908A00C217FB /* Glassmorphism1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775C8B4328AB908A00C217FB /* Glassmorphism1.swift */; };
+		776D7F2828AE0E7F00A72849 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776D7F2728AE0E7F00A72849 /* MenuView.swift */; };
+		776D7F2A28AE204500A72849 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776D7F2928AE204500A72849 /* Leaderboard.swift */; };
+		776D7F2C28AE2B5000A72849 /* LeaderboardPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776D7F2B28AE2B5000A72849 /* LeaderboardPanel.swift */; };
+		776D7F2E28AE32AE00A72849 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776D7F2D28AE32AE00A72849 /* WelcomeScreen.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7744B22528A8BF1E007BE472 /* DiceyPokery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceyPokery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7744B22828A8BF1E007BE472 /* DiceyPokeryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceyPokeryApp.swift; sourceTree = "<group>"; };
+		7744B22C28A8BF21007BE472 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7744B22F28A8BF21007BE472 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7744B23728A8C04B007BE472 /* Modifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		7744B23828A8C04B007BE472 /* PlaySound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		7744B23C28A8C053007BE472 /* bet-chip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "bet-chip.mp3"; sourceTree = "<group>"; };
+		7744B23D28A8C053007BE472 /* blink.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = blink.mp3; sourceTree = "<group>"; };
+		7744B23E28A8C053007BE472 /* winning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winning.mp3; sourceTree = "<group>"; };
+		7744B23F28A8C053007BE472 /* spin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spin.mp3; sourceTree = "<group>"; };
+		7744B24028A8C053007BE472 /* gameover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameover.mp3; sourceTree = "<group>"; };
+		7744B24128A8C053007BE472 /* drum-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "drum-music.mp3"; sourceTree = "<group>"; };
+		7744B24228A8C053007BE472 /* highscore.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = highscore.mp3; sourceTree = "<group>"; };
+		7744B24328A8C053007BE472 /* ring-up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ring-up.mp3"; sourceTree = "<group>"; };
+		7744B25628A8C084007BE472 /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		7744B25728A8C084007BE472 /* ReelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReelView.swift; sourceTree = "<group>"; };
+		7744B25828A8C084007BE472 /* LogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		7744B25928A8C084007BE472 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		775C8B4328AB908A00C217FB /* Glassmorphism1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glassmorphism1.swift; sourceTree = "<group>"; };
+		776D7F2728AE0E7F00A72849 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		776D7F2928AE204500A72849 /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
+		776D7F2B28AE2B5000A72849 /* LeaderboardPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardPanel.swift; sourceTree = "<group>"; };
+		776D7F2D28AE32AE00A72849 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7744B22228A8BF1E007BE472 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7744B21C28A8BF1E007BE472 = {
+			isa = PBXGroup;
+			children = (
+				7744B22728A8BF1E007BE472 /* DiceyPokery */,
+				7744B22628A8BF1E007BE472 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7744B22628A8BF1E007BE472 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7744B22528A8BF1E007BE472 /* DiceyPokery.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7744B22728A8BF1E007BE472 /* DiceyPokery */ = {
+			isa = PBXGroup;
+			children = (
+				7744B25528A8C084007BE472 /* Views */,
+				7744B23628A8C04B007BE472 /* Helpers */,
+				7744B23B28A8C053007BE472 /* Sounds */,
+				7744B22828A8BF1E007BE472 /* DiceyPokeryApp.swift */,
+				7744B22C28A8BF21007BE472 /* Assets.xcassets */,
+				7744B22E28A8BF21007BE472 /* Preview Content */,
+			);
+			path = DiceyPokery;
+			sourceTree = "<group>";
+		};
+		7744B22E28A8BF21007BE472 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7744B22F28A8BF21007BE472 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7744B23628A8C04B007BE472 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7744B23728A8C04B007BE472 /* Modifiers.swift */,
+				7744B23828A8C04B007BE472 /* PlaySound.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7744B23B28A8C053007BE472 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				7744B23C28A8C053007BE472 /* bet-chip.mp3 */,
+				7744B23D28A8C053007BE472 /* blink.mp3 */,
+				7744B23E28A8C053007BE472 /* winning.mp3 */,
+				7744B23F28A8C053007BE472 /* spin.mp3 */,
+				7744B24028A8C053007BE472 /* gameover.mp3 */,
+				7744B24128A8C053007BE472 /* drum-music.mp3 */,
+				7744B24228A8C053007BE472 /* highscore.mp3 */,
+				7744B24328A8C053007BE472 /* ring-up.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		7744B25528A8C084007BE472 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7744B25928A8C084007BE472 /* ContentView.swift */,
+				7744B25628A8C084007BE472 /* InfoView.swift */,
+				7744B25728A8C084007BE472 /* ReelView.swift */,
+				7744B25828A8C084007BE472 /* LogoView.swift */,
+				775C8B4328AB908A00C217FB /* Glassmorphism1.swift */,
+				776D7F2728AE0E7F00A72849 /* MenuView.swift */,
+				776D7F2928AE204500A72849 /* Leaderboard.swift */,
+				776D7F2B28AE2B5000A72849 /* LeaderboardPanel.swift */,
+				776D7F2D28AE32AE00A72849 /* WelcomeScreen.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7744B22428A8BF1E007BE472 /* DiceyPokery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7744B23328A8BF21007BE472 /* Build configuration list for PBXNativeTarget "DiceyPokery" */;
+			buildPhases = (
+				7744B22128A8BF1E007BE472 /* Sources */,
+				7744B22228A8BF1E007BE472 /* Frameworks */,
+				7744B22328A8BF1E007BE472 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DiceyPokery;
+			productName = DiceyPokery;
+			productReference = 7744B22528A8BF1E007BE472 /* DiceyPokery.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7744B21D28A8BF1E007BE472 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					7744B22428A8BF1E007BE472 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 7744B22028A8BF1E007BE472 /* Build configuration list for PBXProject "DiceyPokery" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7744B21C28A8BF1E007BE472;
+			productRefGroup = 7744B22628A8BF1E007BE472 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7744B22428A8BF1E007BE472 /* DiceyPokery */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7744B22328A8BF1E007BE472 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7744B24A28A8C053007BE472 /* highscore.mp3 in Resources */,
+				7744B24B28A8C053007BE472 /* ring-up.mp3 in Resources */,
+				7744B24828A8C053007BE472 /* gameover.mp3 in Resources */,
+				7744B23028A8BF21007BE472 /* Preview Assets.xcassets in Resources */,
+				7744B24928A8C053007BE472 /* drum-music.mp3 in Resources */,
+				7744B24428A8C053007BE472 /* bet-chip.mp3 in Resources */,
+				7744B24728A8C053007BE472 /* spin.mp3 in Resources */,
+				7744B22D28A8BF21007BE472 /* Assets.xcassets in Resources */,
+				7744B24528A8C053007BE472 /* blink.mp3 in Resources */,
+				7744B24628A8C053007BE472 /* winning.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7744B22128A8BF1E007BE472 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7744B25B28A8C084007BE472 /* ReelView.swift in Sources */,
+				775C8B4428AB908A00C217FB /* Glassmorphism1.swift in Sources */,
+				7744B25D28A8C084007BE472 /* ContentView.swift in Sources */,
+				7744B23A28A8C04B007BE472 /* PlaySound.swift in Sources */,
+				776D7F2828AE0E7F00A72849 /* MenuView.swift in Sources */,
+				7744B23928A8C04B007BE472 /* Modifiers.swift in Sources */,
+				776D7F2E28AE32AE00A72849 /* WelcomeScreen.swift in Sources */,
+				776D7F2C28AE2B5000A72849 /* LeaderboardPanel.swift in Sources */,
+				7744B25C28A8C084007BE472 /* LogoView.swift in Sources */,
+				7744B25A28A8C084007BE472 /* InfoView.swift in Sources */,
+				7744B22928A8BF1E007BE472 /* DiceyPokeryApp.swift in Sources */,
+				776D7F2A28AE204500A72849 /* Leaderboard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7744B23128A8BF21007BE472 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7744B23228A8BF21007BE472 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7744B23428A8BF21007BE472 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DiceyPokery/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "s3759957-rmit.edu.vn.DiceyPokery";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7744B23528A8BF21007BE472 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DiceyPokery/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "s3759957-rmit.edu.vn.DiceyPokery";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7744B22028A8BF1E007BE472 /* Build configuration list for PBXProject "DiceyPokery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7744B23128A8BF21007BE472 /* Debug */,
+				7744B23228A8BF21007BE472 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7744B23328A8BF21007BE472 /* Build configuration list for PBXNativeTarget "DiceyPokery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7744B23428A8BF21007BE472 /* Debug */,
+				7744B23528A8BF21007BE472 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7744B21D28A8BF1E007BE472 /* Project object */;
+}
