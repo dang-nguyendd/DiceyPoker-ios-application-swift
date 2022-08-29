@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  glassmorphismPart2
-//
-//  Created by Logan Koshenka on 9/29/21.
-//
-
 import SwiftUI
 
 struct MenuView: View {
@@ -12,34 +5,20 @@ struct MenuView: View {
     @State private var showingInfo = false
     @State private var userDefault = User(namePlayer: "default")
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Environment(\.dismiss) var dismiss
     var user: User
+    
+
     
     var body: some View {
         GeometryReader {screen in
             NavigationView {
                 ZStack {
-                    LinearGradient(colors: [Color.cyan.opacity(0.7), Color.purple.opacity(0.3)], startPoint: .top, endPoint: .bottom)
-                    
-                    Circle()
-                        .frame(width: 300)
-                        .foregroundColor(Color.blue.opacity(0.3))
-                        .blur(radius: 10)
-                        .offset(x: -100, y: -150)
-                    
-                    RoundedRectangle(cornerRadius: 30, style: .continuous)
-                        .frame(width: 400, height: 400)
-                        .foregroundStyle(LinearGradient(colors: [Color.purple.opacity(0.6), Color.mint.opacity(0.5)], startPoint: .top, endPoint: .leading))
-                        .offset(x: 300)
-                        .blur(radius: 30)
-                        .rotationEffect(.degrees(30))
-                    
-                    Circle()
-                        .frame(width: 400)
-                        .foregroundStyle(Color.pink.opacity(0.6))
-                        .blur(radius: 20)
-                        .offset(x: 200, y: -200)
-                    
+                    Glassmorphism1().onAppear(perform: {
+                        userDefault = checkUserDefault(checkUser: user.name.uppercased())
+                    })
+
                     VStack(spacing: 20) {
                         Text("hello, \(self.user.name)!")
                             .font(.system(size: 24, weight: .bold, design: .rounded))
@@ -95,7 +74,6 @@ struct MenuView: View {
             .navigationViewStyle(StackNavigationViewStyle())
             .navigationBarBackButtonHidden(true)
             .accentColor(.pink)
-            
         }
     }
 }

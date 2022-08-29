@@ -40,7 +40,7 @@ struct WelcomeScreen: View {
                                     .multilineTextAlignment(.center)
                                 
                                 Button(action: {}) {
-                                    NavigationLink(destination: MenuView(user: checkUserDefault(checkUser: $playerName.wrappedValue.uppercased()))) {
+                                    NavigationLink(destination: MenuView(user: User(namePlayer: $playerName.wrappedValue.uppercased()))) {
                                         Text("Start".uppercased())
                                     }
                                     
@@ -71,7 +71,7 @@ struct WelcomeScreen: View {
                 }
             }
             .navigationViewStyle(StackNavigationViewStyle())
-            .navigationBarBackButtonHidden(true)
+            .navigationBarBackButtonHidden(false)
             .accentColor(.pink)
         }
 

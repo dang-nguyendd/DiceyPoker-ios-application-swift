@@ -29,6 +29,9 @@
 		776D7F2A28AE204500A72849 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776D7F2928AE204500A72849 /* Leaderboard.swift */; };
 		776D7F2C28AE2B5000A72849 /* LeaderboardPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776D7F2B28AE2B5000A72849 /* LeaderboardPanel.swift */; };
 		776D7F2E28AE32AE00A72849 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776D7F2D28AE32AE00A72849 /* WelcomeScreen.swift */; };
+		777D4C2C28BC981E002FF425 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777D4C2A28BC981E002FF425 /* User.swift */; };
+		777D4C2D28BC981E002FF425 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777D4C2B28BC981E002FF425 /* ModelData.swift */; };
+		777D4C2F28BC9E86002FF425 /* soundtrack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 777D4C2E28BC9E86002FF425 /* soundtrack.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		776D7F2928AE204500A72849 /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 		776D7F2B28AE2B5000A72849 /* LeaderboardPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardPanel.swift; sourceTree = "<group>"; };
 		776D7F2D28AE32AE00A72849 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
+		777D4C2A28BC981E002FF425 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		777D4C2B28BC981E002FF425 /* ModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		777D4C2E28BC9E86002FF425 /* soundtrack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = soundtrack.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,7 @@
 		7744B22728A8BF1E007BE472 /* DiceyPokery */ = {
 			isa = PBXGroup;
 			children = (
+				777D4C2928BC981E002FF425 /* Models */,
 				7744B25528A8C084007BE472 /* Views */,
 				7744B23628A8C04B007BE472 /* Helpers */,
 				7744B23B28A8C053007BE472 /* Sounds */,
@@ -117,6 +124,7 @@
 		7744B23B28A8C053007BE472 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				777D4C2E28BC9E86002FF425 /* soundtrack.mp3 */,
 				7744B23C28A8C053007BE472 /* bet-chip.mp3 */,
 				7744B23D28A8C053007BE472 /* blink.mp3 */,
 				7744B23E28A8C053007BE472 /* winning.mp3 */,
@@ -144,6 +152,16 @@
 			);
 			path = Views;
 			sourceTree = "<group>";
+		};
+		777D4C2928BC981E002FF425 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				777D4C2A28BC981E002FF425 /* User.swift */,
+				777D4C2B28BC981E002FF425 /* ModelData.swift */,
+			);
+			name = Models;
+			path = DiceyPokery/Models;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -210,6 +228,7 @@
 				7744B24928A8C053007BE472 /* drum-music.mp3 in Resources */,
 				7744B24428A8C053007BE472 /* bet-chip.mp3 in Resources */,
 				7744B24728A8C053007BE472 /* spin.mp3 in Resources */,
+				777D4C2F28BC9E86002FF425 /* soundtrack.mp3 in Resources */,
 				7744B22D28A8BF21007BE472 /* Assets.xcassets in Resources */,
 				7744B24528A8C053007BE472 /* blink.mp3 in Resources */,
 				7744B24628A8C053007BE472 /* winning.mp3 in Resources */,
@@ -223,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				777D4C2C28BC981E002FF425 /* User.swift in Sources */,
 				7744B25B28A8C084007BE472 /* ReelView.swift in Sources */,
 				775C8B4428AB908A00C217FB /* Glassmorphism1.swift in Sources */,
 				7744B25D28A8C084007BE472 /* ContentView.swift in Sources */,
@@ -235,6 +255,7 @@
 				7744B25A28A8C084007BE472 /* InfoView.swift in Sources */,
 				7744B22928A8BF1E007BE472 /* DiceyPokeryApp.swift in Sources */,
 				776D7F2A28AE204500A72849 /* Leaderboard.swift in Sources */,
+				777D4C2D28BC981E002FF425 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

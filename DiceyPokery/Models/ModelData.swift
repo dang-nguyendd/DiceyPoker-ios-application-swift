@@ -9,18 +9,21 @@ func setUserDefault(user: User){
     }
 }
 
-//Check if player exists from userDefault
+//Check if player exists from userDefault/ if not create one
 func checkUserDefault(checkUser: String) -> User{
     var finalUser = User.init(namePlayer: checkUser)
     if let user = UserDefaults.standard.object(forKey: checkUser) as? Data {
         let decoder = JSONDecoder()
         if let loadedUser = try? decoder.decode(User.self, from: user) {
             finalUser = loadedUser
+            finalUser.isPlayer = true
         }
     } else {
-        let defaultUser = User.init(namePlayer: checkUser)
+        var defaultUser = User.init(namePlayer: checkUser)
+        defaultUser.isPlayer = true
         setUserDefault(user: defaultUser)
         finalUser = defaultUser
+        
     }
     return finalUser
 }
@@ -32,6 +35,7 @@ func readUserDefault(checkUser: String) -> User{
         let decoder = JSONDecoder()
         if let loadedUser = try? decoder.decode(User.self, from: user) {
             finalUser = loadedUser
+            finalUser.isPlayer = true
         }
     }
     return finalUser

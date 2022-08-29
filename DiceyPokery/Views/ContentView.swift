@@ -1,18 +1,11 @@
-//
-//  ContentView.swift
-//  RMIT Casino
-//
-//  Created by Tom Huynh on 8/1/22.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     // MARK: - PROPERTIES
     let icons = ["blue-1","blue-2","blue-3","blue-4","blue-5","blue-6"]
     
-    let haptics = UINotificationFeedbackGenerator()
     var player: User
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var userDefault = User(namePlayer: "default")
     
     @State private var highscore = 10
@@ -49,14 +42,14 @@ struct ContentView: View {
     // MARK: - SPIN LOGIC
     func drawDicePlayer(){
         playerHand = Int.random(in: 0...icons.count-1)
+        playSound(sound: "spin", type: "mp3")
     }
-    //playSound(sound: "spin", type: "mp3")
-    //haptics.notificationOccurred(.success)
+    
     func drawDiceBot(){
         botHand = Int.random(in: 0...icons.count-1)
+        playSound(sound: "spin", type: "mp3")
     }
-    //playSound(sound: "spin", type: "mp3")
-    //haptics.notificationOccurred(.success)
+    
     func spinReel(reelNum: Int){
         reels[reelNum] = Int.random(in: 0...icons.count-1)
     }
@@ -109,18 +102,7 @@ struct ContentView: View {
         currentanimation += 1
     }
     
-    //playSound(sound: "spin", type: "mp3")
-    //haptics.notificationOccurred(.success)
-    //    func spinReel1(){
-    //        reels[1] = Int.random(in: 1...icons.count)
-    //    }
-    //    //playSound(sound: "spin", type: "mp3")
-    //    //haptics.notificationOccurred(.success)
-    //    func spinReel2(){
-    //        reels[2] = Int.random(in: 1...icons.count)
-    //        //playSound(sound: "spin", type: "mp3")
-    //        //haptics.notificationOccurred(.success)
-    //    }
+    
     
     // MARK: - CHECK WINNING LOGIC
     func checkWinning(){
@@ -145,11 +127,10 @@ struct ContentView: View {
                     playSound(sound: "winning", type: "mp3")
                 }
                 
-            } else {
-                // PLAYER LOSES
-                playLoses()
             }
         }
+        countPlayer = 0
+        countBot = 0
     }
     
     // MARK: - PLAYER WIN LOGIC
@@ -160,14 +141,12 @@ struct ContentView: View {
     // MARK: - HIGHSCORE LOGIC
     func newHighScore(){
         highscore = coins
-        UserDefaults.standard.set(highscore, forKey: "highscore")
+        userDefault.highscore = coins
+        setUserDefault(user: userDefault)
         playSound(sound: "highscore", type: "mp3")
     }
     
     // MARK: - PLAYER LOSE LOGIC
-    func playLoses() {
-        //coins -= betAmount
-    }
     
     // MARK: - BET 2 LOGIC
     func chooseBet2() {
@@ -197,11 +176,6 @@ struct ContentView: View {
         isChooseBetAll = true
         isChooseBet1 = false
         isChooseBet2 = false
-        playSound(sound: "bet-chip", type: "mp3")
-    }
-    func chooseFold() {
-        coinPot = 0
-        playLoses()
         playSound(sound: "bet-chip", type: "mp3")
     }
     
@@ -261,7 +235,7 @@ struct ContentView: View {
                     Spacer()
                     // MARK: - LOGO HEADER
                     LogoView(logoFileName: "logo")
-
+                    
                     // MARK: - SCORE
                     HStack{
                         HStack{
@@ -286,7 +260,7 @@ struct ContentView: View {
                         .modifier(scoreCapsuleStyle())
                         Spacer()
                         HStack{
-                            Text("\(highscore)")
+                            Text("\(userDefault.highscore)")
                                 .modifier(scoreNumberStyle())
                                 .multilineTextAlignment(.leading)
                             Text("Record\nChips".uppercased())
@@ -374,6 +348,7 @@ struct ContentView: View {
                         
                         // MARK: - SPIN BUTTON
                         Button {
+                            print("player: \(playerHand) bot: \(botHand) \(userDefault)")
                             if coinToBet > 0 && gameInPlay {
                                 checkAnimation()
                                 coinPot += coinToBet*2
@@ -419,7 +394,7 @@ struct ContentView: View {
                     
                     
                     // MARK: - FOOTER
-
+                    
                     HStack{
                         
                         HStack (spacing: screen.size.width/500){
@@ -576,8 +551,9 @@ struct ContentView: View {
                                     .multilineTextAlignment(.center)
                                 Button {
                                     self.showGameOverModal = false
+                                    presentationMode.wrappedValue.dismiss()
                                 } label: {
-                                    Text("New Game".uppercased())
+                                    Text("Exit".uppercased())
                                 }
                                 .font(.system(size: 18, weight: .bold, design: .rounded))
                                 .padding(.vertical, 10)
@@ -603,10 +579,21 @@ struct ContentView: View {
             }
             .navigationBarBackButtonHidden(true)
             .edgesIgnoringSafeArea(.all)
+            .navigationBarItems(leading: Button("Menu") {
+                presentationMode.wrappedValue.dismiss()
+            })
         }
+        //        override func viewWillLayoutSubviews() {
+        //           let barButton = UIBarButtonItem()
+        //           barButton.title = "custom"
+        //           barButton.action = #selector(barButtonAction)
+        //           barButton.target = self
+        //           self.navigationItem.setLeftBarButton(barButton, animated: true) }
+        //           @objc func barButtonAction() {
+        //               presentationMode.wrappedValue.dismiss() }
     }
 }
-    // MARK: - PREVIEW
+// MARK: - PREVIEW
 //    struct ContentView_Previews: PreviewProvider {
 //        static var previews: some View {
 //            ContentView(player: User(namePlayer: "defak"))
@@ -614,4 +601,4 @@ struct ContentView: View {
 //        }
 //    }
 //
-    
+
