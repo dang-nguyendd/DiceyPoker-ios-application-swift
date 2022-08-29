@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  glassmorphismPart2
-//
-//  Created by Logan Koshenka on 9/29/21.
-//
-
 import SwiftUI
 
 struct Glassmorphism1: View {

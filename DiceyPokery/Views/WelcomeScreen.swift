@@ -1,10 +1,3 @@
-//
-//  WelcomeScreen.swift
-//  DiceyPokery
-//
-//  Created by Nguyen, Nguyen Dinh Dang on 18/08/2022.
-//
-
 import SwiftUI
 
 struct WelcomeScreen: View {

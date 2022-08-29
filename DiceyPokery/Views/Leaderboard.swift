@@ -8,7 +8,6 @@ struct Leaderboard: View {
         if user.highscore >= 500 {return "Supreme"}
         else if user.highscore >= 300 {return "Master"}
         else if user.highscore >= 100 {return "Pro"}
-        else if user.highscore <= 0 {return "Loser"}
         else {return "No title"}
     }
     
@@ -20,28 +19,30 @@ struct Leaderboard: View {
             }
         }
     }
-
+    
     var body: some View {
         GeometryReader {screen in
             ZStack(alignment: .top){
                 Glassmorphism1()
                     .onAppear(perform: {
-//                        let domain = Bundle.main.bundleIdentifier!
-//                        UserDefaults.standard.removePersistentDomain(forName: domain)
+                        //                        let domain = Bundle.main.bundleIdentifier!
+                        //                        UserDefaults.standard.removePersistentDomain(forName: domain)
                         loopAchievement()
-                })
+                    })
                 VStack(alignment: .center, spacing: 0) {
                     Text("Leaderboard".uppercased())
                         .font(.system(size: 24, weight: .bold, design: .rounded))
                         .foregroundStyle(Color.pink)
                         .frame(alignment: .center)
                         .padding()
-                    VStack(alignment: .leading, spacing: 10) {
-                        ForEach(arrPlayer) {arrPlayer in
-                            LeaderboardPanel(name: "\(arrPlayer.name) | \(checkAchievement(user: arrPlayer))", score: arrPlayer.highscore)
+                    ScrollView(.vertical){
+                        VStack(alignment: .leading, spacing: 10) {
+                            ForEach(arrPlayer) {arrPlayer in
+                                LeaderboardPanel(name: "\(arrPlayer.name) | \(checkAchievement(user: arrPlayer))", score: arrPlayer.highscore)
+                            }
                         }
+                        .frame(width: screen.size.width/1.15)
                     }
-                    .frame(width: screen.size.width/1.15)
                 }
                 .padding(.top, screen.size.height/50)
             }
